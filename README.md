@@ -25,15 +25,14 @@ Welcome to the Quiz Game! This is a fun game where users are authenticated via O
 To get started with the Quiz Game, follow these steps:
 
 1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/your-username/quiz-game.git
-   cd quiz-game
-   ```
+   
+   git clone https://github.com/ty-tm/NGL-Capstone.git
+   cd NGL-Capstone
+   
 
 2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
+      npm install
+   
 
 3. **Set up the MySQL database**:
    - Ensure you have MySQL installed and running.
@@ -45,9 +44,8 @@ To get started with the Quiz Game, follow these steps:
    - Add the necessary environment variables (see [Configuration](#configuration)).
 
 5. **Run the application**:
-   ```bash
-   npm start
-   ```
+     npm start
+  
 
 ## Usage
 Once the application is running, users can:
@@ -58,7 +56,7 @@ Once the application is running, users can:
 ## Configuration
 The application requires several environment variables. Create a `.env` file in the root directory with the following content:
 
-```env
+env
 # Database configuration
 DB_HOST=your-database-host
 DB_USER=your-database-username
@@ -88,14 +86,14 @@ The MySQL database should contain the following tables:
 
 Here is an example SQL script to create the `questions` table:
 
-```sql
+sql
 CREATE TABLE `questions` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `question` TEXT NOT NULL,
   `answer` TEXT NOT NULL,
   PRIMARY KEY (`id`)
 );
-```
+
 
 ## Technologies Used
 - **Frontend**: HTML, CSS, JavaScript
