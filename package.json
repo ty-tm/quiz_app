@@ -1,0 +1,15 @@
+{
+  "name": "ngl-capstone",
+  "version": "1.0.0",
+  "description": "README file for a GitHub repository for a game that randomly picks questions from a MySQL database, displays the answers after a timer counts down to zero, and authenticates users using OpenID Connect.\r ```markdown\r # Quiz Game",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
