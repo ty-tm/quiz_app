@@ -3,18 +3,17 @@ README file for a GitHub repository for a game that randomly picks questions fro
 # Quiz Game
 
 ## Table of Contents
-- [Introduction](#introduction)
+- [Introduction] (#introduction)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Configuration](#configuration)
 - [Database Schema](#database-schema)
 - [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Introduction
-Welcome to the Quiz Game! This is an interactive game where users are authenticated via OpenID Connect, presented with questions randomly selected from a MySQL database, and shown the answers after a timer counts down to zero. 
+Welcome to the Quiz Game! This is a fun game where users are authenticated via OpenID Connect,then presented with questions randomly selected from a question bank stored in a MySQL database, and shown the answers after a timer counts down to zero. 
 
 ## Features
 - User authentication using OpenID Connect.
@@ -103,16 +102,7 @@ CREATE TABLE `questions` (
 - **Backend**: Node.js, Express.js
 - **Database**: MySQL
 - **Authentication**: OpenID Connect
-- **ORM**: Sequelize (optional)
 
-## Contributing
-We welcome contributions! Please follow these steps to contribute:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Commit your changes (`git commit -am 'Add new feature'`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Open a pull request.
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
