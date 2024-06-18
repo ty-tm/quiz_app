@@ -3,18 +3,17 @@ README file for a GitHub repository for a game that randomly picks questions fro
 # Quiz Game
 
 ## Table of Contents
-- [Introduction](#introduction)
+- [Introduction] (#introduction)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Configuration](#configuration)
 - [Database Schema](#database-schema)
 - [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Introduction
-Welcome to the Quiz Game! This is an interactive game where users are authenticated via OpenID Connect, presented with questions randomly selected from a MySQL database, and shown the answers after a timer counts down to zero. 
+Welcome to the Quiz Game! This is a fun game where users are authenticated via OpenID Connect,then presented with questions randomly selected from a question bank stored in a MySQL database, and shown the answers after a timer counts down to zero. 
 
 ## Features
 - User authentication using OpenID Connect.
@@ -26,15 +25,14 @@ Welcome to the Quiz Game! This is an interactive game where users are authentica
 To get started with the Quiz Game, follow these steps:
 
 1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/your-username/quiz-game.git
-   cd quiz-game
-   ```
+   
+   git clone https://github.com/ty-tm/NGL-Capstone.git
+   cd NGL-Capstone
+   
 
 2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
+      npm install
+   
 
 3. **Set up the MySQL database**:
    - Ensure you have MySQL installed and running.
@@ -46,9 +44,8 @@ To get started with the Quiz Game, follow these steps:
    - Add the necessary environment variables (see [Configuration](#configuration)).
 
 5. **Run the application**:
-   ```bash
-   npm start
-   ```
+     npm start
+  
 
 ## Usage
 Once the application is running, users can:
@@ -59,7 +56,7 @@ Once the application is running, users can:
 ## Configuration
 The application requires several environment variables. Create a `.env` file in the root directory with the following content:
 
-```env
+env
 # Database configuration
 DB_HOST=your-database-host
 DB_USER=your-database-username
@@ -89,30 +86,21 @@ The MySQL database should contain the following tables:
 
 Here is an example SQL script to create the `questions` table:
 
-```sql
+sql
 CREATE TABLE `questions` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `question` TEXT NOT NULL,
   `answer` TEXT NOT NULL,
   PRIMARY KEY (`id`)
 );
-```
+
 
 ## Technologies Used
 - **Frontend**: HTML, CSS, JavaScript
 - **Backend**: Node.js, Express.js
 - **Database**: MySQL
 - **Authentication**: OpenID Connect
-- **ORM**: Sequelize (optional)
 
-## Contributing
-We welcome contributions! Please follow these steps to contribute:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Commit your changes (`git commit -am 'Add new feature'`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Open a pull request.
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
