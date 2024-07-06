@@ -1,111 +1,71 @@
-README file for a GitHub repository for a game that randomly picks questions from a MySQL database, displays the answers after a timer counts down to zero, and authenticates users using OpenID Connect.
-```markdown
-# Quiz Game
+This README provides a comprehensive overview of this project:
+
+# Quiz App
 
 ## Table of Contents
-- [Introduction] (#introduction)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Database Schema](#database-schema)
-- [Technologies Used](#technologies-used)
-- [License](#license)
 
-## Introduction
-Welcome to the Quiz Game! This is a fun game where users are authenticated via OpenID Connect,then presented with questions randomly selected from a question bank stored in a MySQL database, and shown the answers after a timer counts down to zero. 
+1. A brief description of the app](#A brief description of the app)
+2. Key features
+3. Prerequisites for running the app
+4. Installation instructions
+5. Configuration details
+6. Usage instructions
+7. License information
+8. Acknowledgments for third-party libraries or resources used
+9. Contact information
+
+## Description
+This is an interactive quiz application developed using HTML5, PHP, MySQL, and JavaScript. The app features user authentication via OpenID Connect, random question selection from a MySQL database, and a timed quiz interface.
 
 ## Features
-- User authentication using OpenID Connect.
-- Random question selection from a MySQL database.
-- Countdown timer for each question.
-- Display correct answers after the timer expires.
+- User authentication using OpenID Connect
+- Random question selection from a database
+- Timed quiz interface with a 5-second countdown for each question
+- User profile page displaying quiz history
+- Responsive design for various screen sizes
+
+## Prerequisites
+- PHP 7.4 or higher
+- MySQL 5.7 or higher
+- Web server (Apache or Nginx)
+- Composer (for managing PHP dependencies)
 
 ## Installation
-To get started with the Quiz Game, follow these steps:
-
-1. **Clone the repository**:
-   
-   git clone https://github.com/ty-tm/NGL-Capstone.git
-   cd NGL-Capstone
-   
-
-2. **Install dependencies**:
-      npm install
-   
-
-3. **Set up the MySQL database**:
-   - Ensure you have MySQL installed and running.
-   - Create a database for the quiz game.
-   - Import the provided database schema (see [Database Schema](#database-schema)).
-
-4. **Configure environment variables**:
-   - Create a `.env` file in the root directory of the project.
-   - Add the necessary environment variables (see [Configuration](#configuration)).
-
-5. **Run the application**:
-     npm start
-  
-
-## Usage
-Once the application is running, users can:
-- Sign in using their OpenID Connect credentials.
-- Start the quiz to answer random questions.
-- View the correct answers after the timer counts down to zero.
+1. Clone the repository: git clone https://github.com/ty-tm/quiz_app.git
+2. Navigate to the project directory: cd quiz-app
+3. Install PHP dependencies: composer install
+4. Create a MySQL database for the application.
+5. Import the database schema: mysql -u your_username -p quiz-app < database/schema.sql
+6. Edit `config.php` and update it with your database credentials and OpenID Connect settings.
 
 ## Configuration
-The application requires several environment variables. Create a `.env` file in the root directory with the following content:
+Update the following in your `config.php` file:
+- ## Database settings:
+php
+- define('DB_HOST', 'your_database_host');
+- define('DB_USER', 'your_database_username');
+- define('DB_PASS', 'your_database_password');
+- define('DB_NAME', 'your_database_name');
+- ## OpenID Connect settings:
+- define('OIDC_CLIENT_ID', 'your_client_id');
+- define('OIDC_CLIENT_SECRET', 'your_client_secret');
+- define('OIDC_REDIRECT_URI', 'http://your-domain.com/login.php');
+- define('OIDC_PROVIDER_URL', 'https://your-openid-provider.com');
 
-env
-# Database configuration
-DB_HOST=your-database-host
-DB_USER=your-database-username
-DB_PASSWORD=your-database-password
-DB_NAME=your-database-name
-
-# OpenID Connect configuration
-OIDC_CLIENT_ID=your-client-id
-OIDC_CLIENT_SECRET=your-client-secret
-OIDC_ISSUER=https://your-issuer-url
-OIDC_REDIRECT_URI=http://your-app-url/callback
-
-# Other configurations
-PORT=3000
-SESSION_SECRET=your-session-secret
-```
-
-## Database Schema
-The MySQL database should contain the following tables:
-
-### `questions` Table
-| Column      | Type        | Description                  |
-|-------------|-------------|------------------------------|
-| `id`        | INT         | Primary key                  |
-| `question`  | TEXT        | The question text            |
-| `answer`    | TEXT        | The correct answer           |
-
-Here is an example SQL script to create the `questions` table:
-
-sql
-CREATE TABLE `questions` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `question` TEXT NOT NULL,
-  `answer` TEXT NOT NULL,
-  PRIMARY KEY (`id`)
-);
-
-
-## Technologies Used
-- **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Node.js, Express.js
-- **Database**: MySQL
-- **Authentication**: OpenID Connect
-
+## Usage
+- Start your local web server.
+- Navigate to http://localhost/quiz_app in your web browser.
+- Log in using your OpenID Connect credentials.
+- Click "Start Quiz" to begin answering questions.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the LICENSE.md file for details.
 
----
+## Acknowledgments
+- OpenID Connect PHP library: jumbojett/OpenID-Connect-PHP
+- Bootstrap for responsive design
 
-Thank you for using the Quiz Game! If you have any questions or feedback, feel free to open an issue or submit a pull request.
-```
+## Contact
+## Moses Oyakhilome - cybermoses404@gmail.com
+## Project Link: https://github.com/ty-tm/quiz_app
+
