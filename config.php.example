@@ -1,0 +1,12 @@
+<?php
+// Database configuration
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', 'Secret55');
+define('DB_NAME', 'quiz_app');
+
+// OpenID Connect configuration
+define('OIDC_CLIENT_ID', 'YOUR_CLIENT_ID_HERE');
+define('OIDC_CLIENT_SECRET', 'YOUR_CLIENT_SECRET_HERE');
+define('OIDC_REDIRECT_URI', 'http://localhost/quiz-app/login.php');
+define('OIDC_PROVIDER_URL', 'https://accounts.google.com');
